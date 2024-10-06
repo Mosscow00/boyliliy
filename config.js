@@ -14,7 +14,7 @@ global.authFile = `Session`;
 global.isBaileysFail = false
 
 global.owner = [
-  ['201033757279', '7rB 2leX', true]
+  ['7rB 2leX','201033757279', true]
 ];
 
 global.ownername = '7rB 2leX';
