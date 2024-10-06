@@ -4,7 +4,7 @@ const handler = async (m, { conn, isROwner, text }) => {
  
   if (!process.send) throw `*زعلان منك ومش هرستر 🧞*`;
   // conn.readMessages([m.key])
-  await m.reply(`*اهون عليك تهون عليا هترستر وارجع بعد شويه 🧞*`);
+  await m.reply(`*جاري اعادة التفعيل مرة اخرى*`);
   process.send('reset');
 };
 handler.help = ['restart'];
