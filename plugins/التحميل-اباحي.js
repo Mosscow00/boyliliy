@@ -4,7 +4,7 @@ import cheerio from 'cheerio';
 
 const handler = async (m, { text, conn, isOwner, args, command, usedPrefix }) => {
 
-let fakecontact = { 'key': { 'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': '𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓' }, 'message': { 'contactMessage': { 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } }, 'participant': '0@s.whatsapp.net' };
+let fakecontact = { 'key': { 'participants': '201210307869@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': '7A' }, 'message': { 'contactMessage': { 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` } }, 'participant': '201210307869@s.whatsapp.net' };
   
 
   if (db.data.chats[m.chat].modohorny && m.isGroup) return conn.sendMessage(m.chat,{text: '*وضع التقييد شغال ي حوب 🧞*'}, {quoted: fakecontact });   
@@ -116,7 +116,7 @@ let xnxxLink = args[0];
     
     const res = await xnxxdl(xnxxLink);
     const json = await res.result.files;
-    let txt = `╾━━━━━━━━━━━━━━━━━━━━━━━╼\n> *أسم المقطع :* ${res.result.title} 🧞\n\n> *رابط الصفحه :* ${xnxxLink}\n╾━━━━━━━━━━━━━━━━━━━━━━━╼\n> 🧞 𝐋𝐨𝐚𝐝𝐢𝐧𝐠, 𝐰𝐚𝐢𝐭 𝐦𝐨𝐦𝐞𝐧𝐭...`;
+    let txt = `╾━━━━━━━━━━━━━━━━━━━━━━━╼\n> *أسم المقطع :* ${res.result.title} 🧞\n\n> *رابط الصفحه :* ${xnxxLink}\n╾━━━━━━━━━━━━━━━━━━━━━━━╼\n> 🧞 أنتظر قليلا ...`;
     
   let txt2 = `╾━━━━━━━━━━━━━━━━━━━━━━━╼\n> *أسم المقطع :* ${res.result.title} 🧞\n> *وصف المقطع :* ${res.result.info} 🧞\n╾━━━━━━━━━━━━━━━━━━━━━━━╼`;
     

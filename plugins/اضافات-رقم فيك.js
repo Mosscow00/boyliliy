@@ -19,7 +19,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
     let additionalLink = args.join(" ").trim(); 
     
     if (!lister.includes(feature)) {
-        return conn.sendButton(m.chat, cap, '𝑺𝐻𝐴𝑊𝐴𝑍𝐴-𝐵𝛩𝑇', pp, [['دولـة',`${usedPrefix + command} دولة`]], null, null, m);
+        return conn.sendButton(m.chat, cap, '7rB 2leX', pp, [['دولـة',`${usedPrefix + command} دولة`]], null, null, m);
     }
 
     if (feature === "دولة") {
@@ -71,7 +71,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
     message: {
       interactiveMessage: {
         body: { text: caption },
-        footer: { text: '7A' },
+        footer: { text: '7rB 2leX' },
         header: {
           hasMediaAttachment: true,
           imageMessage: media.imageMessage,
@@ -108,7 +108,7 @@ return await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
 
         } catch (error) {
             console.log(error);
-            return conn.sendButton(m.chat, `╮────────────────────────╭ـ\n│ حدث خطأ أثناء جلب البيانات. حاول مرة أخرى لاحقًا.\n╯────────────────────────╰ـ `, '𝑺𝐻𝐴𝑊𝐴𝑍𝐴-𝐵𝛩𝑇', pp, [['حاول مجددا',`${usedPrefix + command} دولة`]], null, null, m);
+            return conn.sendButton(m.chat, `╮────────────────────────╭ـ\n│ حدث خطأ أثناء جلب البيانات. حاول مرة أخرى لاحقًا.\n╯────────────────────────╰ـ `, '7A', pp, [['حاول مجددا',`${usedPrefix + command} دولة`]], null, null, m);
         }
     } else if (feature === "أرقام") {
         if (!additionalLink) {
@@ -191,7 +191,7 @@ return await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
 
         } catch (error) {
             console.log(error);
-            return conn.sendButton(m.chat, `╮────────────────────────╭ـ\n│ حدث خطأ أثناء جلب البيانات. حاول مرة أخرى لاحقًا.\n╯────────────────────────╰ـ `, '𝑺𝐻𝐴𝑊𝐴𝑍𝐴-𝐵𝛩𝑇', pp, [['حاول مجددا',`${usedPrefix + command} أرقام ${additionalLink}`]], null, null, m);
+            return conn.sendButton(m.chat, `╮────────────────────────╭ـ\n│ حدث خطأ أثناء جلب البيانات. حاول مرة أخرى لاحقًا.\n╯────────────────────────╰ـ `, '7rB 2leX', pp, [['حاول مجددا',`${usedPrefix + command} أرقام ${additionalLink}`]], null, null, m);
         }
 
     } else if (feature === "رسائل") {
@@ -273,7 +273,7 @@ return await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
 
         } catch (error) {
             console.log(error);
-            return conn.sendButton(m.chat, `╮────────────────────────╭ـ\n│ حدث خطأ أثناء جلب البيانات. حاول مرة أخرى لاحقًا.\n╯────────────────────────╰ـ `, '𝑺𝐻𝐴𝑊𝐴𝑍𝐴-𝐵𝛩𝑇', pp, [['حاول مجددا',`${usedPrefix + command} رسائل ${additionalLink}`]], null, null, m);
+            return conn.sendButton(m.chat, `╮────────────────────────╭ـ\n│ حدث خطأ أثناء جلب البيانات. حاول مرة أخرى لاحقًا.\n╯────────────────────────╰ـ `, '7A', pp, [['حاول مجددا',`${usedPrefix + command} رسائل ${additionalLink}`]], null, null, m);
         }
         
         
