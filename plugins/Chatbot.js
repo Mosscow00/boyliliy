@@ -117,9 +117,9 @@ let handler = m => m;
      responses = [ 
          '*انت اكتر عمتا 🥹💘*'  ,  
      ];
-    }else if (/^طارق$/i.test(m.text)) { 
+    }else if (/^حرب$/i.test(m.text)) { 
      responses = [ 
-         '*مياه عشان شرقت'  ,  
+         '*عيون حرب*'  ,  
      ];
     }else if (/^حبوني$/i.test(m.text)) { 
      responses = [ 
