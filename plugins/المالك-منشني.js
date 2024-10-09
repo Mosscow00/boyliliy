@@ -31,9 +31,9 @@ handler.all = async function (m, conn) {
     const txt5 = '*احمم أنا هنا ي مرات مطوري 🧸❤️*';
     const txt6 = '*ايوا يعم ولعانه معاك حب براحتك وانا هراقب 🧸❤️*';
  
-    let num = "201210307869"; //number owner
+    let num = "201033757279"; //number owner
     let num2 = "201210307869"; //number bot
-    let num3 = "201033757279";
+    let num3 = "";
     let sender = m.sender.split('@')[0];
  
     if (m.mentionedJid && m.mentionedJid[0]) {
