@@ -5,8 +5,8 @@ function handler(m, {groupMetadata}) {
   let b;
   do b = ps.getRandom();
   while (b === a);
-  m.reply(`*${toM(a)}, يجب أن تتزوج 💍 مع ${toM(b)}, أنتما زوجين جيدين 💓*`, null, {
-    mentions: [a, b],
+  m.reply(`*${taguser}, يجب أن تتزوج 💍 مع ${toM(b)}, أنتما زوجين جيدين 💓*`, null, {
+    mentions: [a,b],
   });
 }
 handler.help = ['formarpareja'];
