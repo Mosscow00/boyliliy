@@ -5,12 +5,12 @@ function handler(m, {groupMetadata}) {
   let b;
   do b = ps.getRandom();
   while (b === a);
-  m.reply(`*${taguser}, يجب أن تتزوج 💍 مع ${toM(b)}, أنتما زوجين جيدين 💓*`, null, {
-    mentions: [a,b],
+  m.reply(`${toM(a)}, يجب أن تتزوج 💍 مع ${toM(b)}, أنتما زوجين جيدين 💓`, null, {
+    mentions: [a, b],
   });
 }
 handler.help = ['formarpareja'];
 handler.tags = ['main', 'fun'];
-handler.command = ['جوزني', 'زواج', 'زوجني'];
+handler.command = ['زواج','جواز'];
 handler.group = true;
 export default handler;
