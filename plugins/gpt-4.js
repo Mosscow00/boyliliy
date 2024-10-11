@@ -19,10 +19,9 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
       m.chat, 
       replyText, 
       author, 
-      'https://envs.sh/Bre.jpg', 
-      [['.المطور']], 
+      'https://envs.sh/Bre.jpg',  
       null, 
-      [['قــنـاة الــبــوت', `https://whatsapp.com/channel/0029VaoOUTCA89MgywLh6s19`]], 
+      [['قــنـاة الــبــوت']], `https://whatsapp.com/channel/0029VaoOUTCA89MgywLh6s19`]], 
       m
     );
   } catch (error) {
