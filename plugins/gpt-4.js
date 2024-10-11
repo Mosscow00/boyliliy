@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   try {
-    if (!text) throw 'ايوة.. ممكن توضح اكتر ؟?';
+    if (!text) throw 'uhm.. what do you want to say?';
     await m.react('🤖');
 
     const prompt = encodeURIComponent(text);
@@ -19,14 +19,15 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
       m.chat, 
       replyText, 
       author, 
-      'https://envs.sh/Bre.jpg',  
+      'https://envs.sh/Bre.jpg', 
+      [['الــمــطـور', `.المطور`]], 
       null, 
-      [['قــنـاة الــبــوت']], `https://whatsapp.com/channel/0029VaoOUTCA89MgywLh6s19`]], 
+      [['قــنـاة الــبــوت', `https://whatsapp.com/channel/0029VarJdJO7dmeZS5ZKft1U`]], 
       m
     );
   } catch (error) {
     console.error(error);
-    m.reply('*تقدر تسألني سؤال وارد عليك*');
+    m.reply('*مرحبا ضع سؤالك يا اخي 🤡*');
   }
 };
 
