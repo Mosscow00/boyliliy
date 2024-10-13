@@ -13,20 +13,20 @@ function handler(m, { groupMetadata }) {
   // اختيار شريك عشوائي
   let partner;
   do {
-    partner = participants.getRandom();
+    partner = participants[Math.floor(Math.random() * participants.length)];
   } while (partner === userId); // التأكد من عدم اختيار المستخدم نفسه
 
   // إرسال الرسالة مع ذكر الأسماء
-  m.reply(`${toM(userId)}, حان الوقت لتجد شريكك! 💖\n` +
-           `📅 يجب أن تتزوج مع ${toM(partner)}! \n` +
-           `✨ أنتما ثنائي رائع، نأمل أن تكونا سعيدين معًا! 💍`, null, {
+  m.reply(`${toM(userId)}, تهانينا! 💖\n` +
+           `لقد تم زواجك مع ${toM(partner)}! \n` +
+           `✨ أنتما ثنائي رائع، نتمنى لكما حياة سعيدة معًا! 💍`, null, {
     mentions: [userId, partner],
   });
 }
 
 handler.help = [ formarpareja ];
 handler.tags = [ main ,  fun ];
-handler.command = [ زواج ,  جواز ];
+handler.command = ['زواج','جواز'];
 handler.group = true;
 
 export default handler;
