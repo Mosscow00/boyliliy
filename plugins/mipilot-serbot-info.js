@@ -1,11 +1,5 @@
 import ws from 'ws';
-
 async function handler(m, { conn: _envio, usedPrefix }) {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language || global.defaultLenguaje
-  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
-  const tradutor = _translate.plugins.mipilot_serbot_info
-
   const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
   function convertirMsADiasHorasMinutosSegundos(ms) {
   var segundos = Math.floor(ms / 1000);
@@ -19,37 +13,38 @@ async function handler(m, { conn: _envio, usedPrefix }) {
 
   var resultado = "";
   if (días !== 0) {
-    resultado += días + tradutor.texto3[0];
+    resultado += días + " días, ";
   }
   if (horas !== 0) {
-    resultado += horas + tradutor.texto3[1];
+    resultado += horas + " horas, ";
   }
   if (minutos !== 0) {
-    resultado += minutos + tradutor.texto3[2];
+    resultado += minutos + " minutos, ";
   }
   if (segundos !== 0) {
-    resultado += segundos + tradutor.texto3[3];
+    resultado += segundos + " segundos";
   }
 
   return resultado;
 }
 
-  const message = users.map((v, index) => `*${index + 1}.-* @${v.user.jid.replace(/[^0-9]/g, '')}\n${tradutor.texto4[0]} wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n${tradutor.texto4[1]} ${v.user.name || '-'}\n${tradutor.texto4[2]} ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : "Desconocido"}`).join('\n\n');
-  const replyMessage = message.length === 0 ? tradutor.texto1 : message;
+  const message = users.map((v, index) => `*${index + 1}.-* @${v.user.jid.replace(/[^0-9]/g, '')}\n*🥏 wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n*Nombre:* ${v.user.name || '-'}\n*Uptime:* ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : "Desconocido"}`).join('\n\n');
+  const replyMessage = message.length === 0 ? '*⚠️ NO HAY SUB BOTS DISPONIBLE POR EL MOMENTO . 🔰VERIFIQUE MÁS TARDE.*' : message;
   const totalUsers = users.length;
-  const responseMessage = `
-${tradutor.texto2[0]}
-
-${tradutor.texto2[1]}
-
-${tradutor.texto2[2]}
-
-${tradutor.texto2[3]} ${totalUsers || '0'}
-
-${replyMessage.trim()}`.trim();
-
-  await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m});
+  const responseMessage = `${replyMessage.trim()}`.trim();
+await m.reply(`*🚀 AQUÍ TIENE LA LISTA DE LOS SUBBOTS ACTIVÓS EN ESTOS MOMENTOS*\n\nSUB BOTS CONECTADO : ${totalUsers || '0'}`)
+await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m});
 }
 handler.command = handler.help = ['listjadibot', 'bots', 'subsbots'];
 handler.tags = ['jadibot'];
 export default handler;
+
+/*async function handler(m, { usedPrefix }) {
+let users = [...new Set([...global.conns.filter(conn => conn.user && conn.state !== 'close').map(conn => conn.user)])]  
+const message = users.map(v => '🥏 wa.me/' + v.jid.replace(/[^0-9]/g, '') + `?text=${usedPrefix}estado\n(${v.name})\n\n`).join('\n\n')
+const replyMessage = (message.length === 0) ? "*⚠️ NO HAY SUB BOTS DISPONIBLE POR EL MOMENTO . 🔰VERIFIQUE MÁS TARDE.*" : message
+await m.reply( '*🚀 AQUÍ TIENE LA LISTA DE LOS SUBBOTS ACTIVÓS EN ESTOS MOMENTOS*')
+await m.reply(replyMessage.trim())}
+handler.command = handler.help = ['listjadibot','bots','subsbots']
+handler.tags = ['jadibot']
+export default handler*/
