@@ -36,7 +36,7 @@ await m.reply(`*🚀 AQUÍ TIENE LA LISTA DE LOS SUBBOTS ACTIVÓS EN ESTOS MOMEN
 await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m});
 }
 handler.command = handler.help = ['listjadibot', 'bots', 'subsbots'];
-handler.tags = ['jadibot'];
+handler.tags = ['معلومات-الربط'];
 export default handler;
 
 /*async function handler(m, { usedPrefix }) {
